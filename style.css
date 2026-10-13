@@ -583,6 +583,28 @@ nav a:hover {
   display: none;
 }
 
+
+/* TERMS OF SERVICE — elegant typography */
+.rules summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  line-height: 1.3;
+  letter-spacing: 0.4px;
+  color: var(--gr);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.rules summary:hover {
+  color: var(--r);
+}
+
+.rules summary::-webkit-details-marker {
+  display: none;
+}
+
 .rules p {
   max-width: 760px;
   margin: 15px 0 4px;
@@ -591,6 +613,18 @@ nav a:hover {
   line-height: 1.9;
   color: #62352c;
 }
+
+@media (max-width: 800px) {
+  .rules summary {
+    font-size: 21px;
+  }
+
+  .rules p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
 
 /* CONTACT */
 
