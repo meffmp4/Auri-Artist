@@ -36,8 +36,6 @@ a {
   color: inherit;
 }
 
-/* TEXTURE */
-
 .noise {
   position: fixed;
   inset: 0;
@@ -107,6 +105,24 @@ nav a:hover {
   color: var(--c);
   font-size: 23px;
   cursor: pointer;
+}
+
+.lang-toggle {
+  flex: 0 0 auto;
+  margin-left: 18px;
+  border: 1px solid var(--g);
+  background: transparent;
+  color: var(--y);
+  padding: 9px 12px;
+  font: 600 10px "DM Sans", sans-serif;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.lang-toggle:hover {
+  background: var(--g);
+  color: var(--b);
 }
 
 /* HERO */
@@ -368,23 +384,11 @@ nav a:hover {
   color: var(--g);
 }
 
-/* EXTRAS — LARGER AND MORE SPACIOUS */
+/* EXTRAS */
 
 .extras {
   display: grid;
   grid-template-columns: 1.5fr .7fr .9fr;
-  gap: 18px;
-  margin-top: 48px;
-  border-top: 1px solid #8c090233;
-  padding-top: 28px;
-  align-items: stretch;
-}
-
-
-/* COMMISSION EXTRAS — refined cards */
-.extras {
-  display: grid;
-  grid-template-columns: 1.5fr 0.7fr 0.9fr;
   gap: 18px;
   margin-top: 48px;
   padding-top: 28px;
@@ -404,41 +408,13 @@ nav a:hover {
   font-size: 12px;
   line-height: 1.7;
   color: var(--ink);
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .extras > div:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px #6d211218;
 }
-
-.extras strong {
-  color: var(--gr);
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.8px;
-  line-height: 1.5;
-  margin-bottom: 3px;
-}
-
-/* Mobile layout */
-@media (max-width: 800px) {
-  .extras {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-top: 35px;
-    padding-top: 24px;
-  }
-
-  .extras > div {
-    padding: 21px 20px;
-    gap: 9px;
-    font-size: 12px;
-  }
-}
-
 
 .extras strong {
   color: var(--gr);
@@ -583,28 +559,6 @@ nav a:hover {
   display: none;
 }
 
-
-/* TERMS OF SERVICE — elegant typography */
-.rules summary {
-  cursor: pointer;
-  list-style: none;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 23px;
-  line-height: 1.3;
-  letter-spacing: 0.4px;
-  color: var(--gr);
-  font-weight: 600;
-  transition: color 0.25s ease;
-}
-
-.rules summary:hover {
-  color: var(--r);
-}
-
-.rules summary::-webkit-details-marker {
-  display: none;
-}
-
 .rules p {
   max-width: 760px;
   margin: 15px 0 4px;
@@ -613,18 +567,6 @@ nav a:hover {
   line-height: 1.9;
   color: #62352c;
 }
-
-@media (max-width: 800px) {
-  .rules summary {
-    font-size: 21px;
-  }
-
-  .rules p {
-    font-size: 12px;
-    line-height: 1.8;
-  }
-}
-
 
 /* CONTACT */
 
@@ -674,6 +616,44 @@ nav a:hover {
   color: var(--g);
   font-size: 8px;
   letter-spacing: 2px;
+}
+
+/* SOCIAL LINKS */
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 760px;
+  margin: 34px auto 0;
+}
+
+.socials .eyebrow {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.socials a {
+  display: inline-flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 135px;
+  border: 1px solid #fece7955;
+  padding: 13px 16px;
+  color: var(--y);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  transition: .25s ease;
+}
+
+.socials a:hover {
+  background: var(--g);
+  color: var(--b);
+  border-color: var(--g);
+  transform: translateY(-3px);
 }
 
 /* FOOTER */
@@ -853,8 +833,6 @@ footer {
     transform: translateY(-5px);
   }
 
-  /* Extras stack vertically on mobile */
-
   .extras {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -915,6 +893,25 @@ footer {
 
   .lightbox {
     padding: 20px;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+    margin-right: 12px;
+    padding: 8px 10px;
+  }
+
+  .header nav {
+    top: 64px;
+  }
+
+  .socials {
+    gap: 8px;
+  }
+
+  .socials a {
+    flex: 1 1 42%;
+    min-width: 0;
   }
 }
 
